@@ -36,11 +36,16 @@ class _AppNavigatorState extends State<AppNavigator> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: (index) => setState(() => _selectedIndex = index),
+        backgroundColor: const Color(0xFF1E1E1E),
+        selectedItemColor: Colors.deepPurpleAccent,
+        unselectedItemColor: Colors.white38,
+        type: BottomNavigationBarType.fixed,
+        selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w600, fontSize: 12),
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Início"),
-          BottomNavigationBarItem(icon: Icon(Icons.map), label: "Trilhos"),
-          BottomNavigationBarItem(icon: Icon(Icons.directions_walk), label: "Atividade"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Perfil"),
+          BottomNavigationBarItem(icon: Icon(Icons.home_rounded), label: "Início"),
+          BottomNavigationBarItem(icon: Icon(Icons.map_rounded), label: "Trilhos"),
+          BottomNavigationBarItem(icon: Icon(Icons.directions_walk_rounded), label: "Atividade"),
+          BottomNavigationBarItem(icon: Icon(Icons.person_rounded), label: "Perfil"),
         ],
       ),
     );
